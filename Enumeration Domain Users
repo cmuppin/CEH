@@ -1,0 +1,8 @@
+NET USERS /DOMAIN >USERS.TXT
+Domain: TEST.local
+User Enumeration:
+  Windows:
+    net user
+    net user /domain
+    net user [username]
+    net user [username] /domain
