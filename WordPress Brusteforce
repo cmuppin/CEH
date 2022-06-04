@@ -1,0 +1,2 @@
+wpscan --url http://172.16.0.27:8080/CEH/ -u james -P /path/pass.txt
+wpscan --url https://example/ --enumerate u (To enumerate the user)
