@@ -1,0 +1,3 @@
+nmap -sn -O 172.16.43.1/24 
+nmap -sS -sC -sV -O 172.16.43.3 -oN nmap.txt
+nmap 172.16.43.1/24
