@@ -1,1 +1,4 @@
 snow.exe -C -p "test" confidential.txt
+
+-C  compressing / uncompressing
+-p  password
