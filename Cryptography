@@ -1,0 +1,24 @@
+Hash identifier and Hash cracking
+
+Hash Identifier
+https://www.onlinehashcrack.com/hash-identification.php
+
+Hash-identifier (CLI)
+
+Hash Crack
+https://crackstation.net/
+https://hashes.com/en/decrypt/hash
+
+Hashcat -a 3 -m 900 hash.txt /rockyou.txt
+
+-a attack mode
+-m hashtype
+900 md4
+1000 NTLM
+1800 SHA512CRYPT
+110 SHA1 with SALT HASH
+0  MD5
+100 SHA1
+1400 SHA256
+3200 BCRYPT
+160 HMAC-SHA1
