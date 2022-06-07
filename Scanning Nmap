@@ -1,0 +1,28 @@
+nmap -sn 10.10.10.10/24 -oN nmap.txt
+nmap -sC -sV -sS -O 10.10.10.11 -oN nmap.txt
+nmap -A 10.10.10.10/24 -oN nmap.txt
+
+nmap -sn -O 172.16.43.1/24 
+nmap -sS -sC -sV -O 172.16.43.3 -oN nmap.txt
+nmap 172.16.43.1/24
+
+nmap -sV -sC -pA nmap 10.10.10.x
+nmap -sC -sV -v -oN nmap.txt 10.10.10.10
+nmap -sU -sV -A t4 -v -oN udp.txt 10.10.10.1
+
+nmap -f IP
+nmap -sn -PR IP
+nmap -sn -PE ip-range
+nmap -sn 10.10.10.10/24
+nmap -sC -sS -sV -O IP
+nmap -A IP
+
+-sn disable port scan
+-PR ARP ping scan
+-PU UDP ping scan
+-PE ICMP ECHO ping scan
+-f  Splits IP into fragment packets
+
+nmap --script smb-os-discovery.nse IP 
+Displays OS, Computer-Name, Domain, WorkGroup and Ports.
+
