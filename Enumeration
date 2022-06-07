@@ -1,0 +1,16 @@
+SNMP Enumeration
+
+nmap -sU -P 161 IP
+snmp-check IP
+Displays Network Info, Network Interfaces, Network IP, Routing Info, TCP connection and listening, process, Storage info, File System and Device Info.
+
+
+NetBios Enumeration
+
+nbstat -a IP
+-a netbios name table
+-c list contents of Netbios name cache
+
+net use
+Displays connection status, Shared folder/drive and Network Information.
+
